@@ -36,23 +36,22 @@ https://github.com/C6000022/paper-deep-reading/tree/main/skills/paper-deep-readi
 
 如果安装后技能未出现，重启 Codex。安装方式和本地发现目录参见 [OpenAI 官方技能文档](https://learn.chatgpt.com/docs/build-skills)。
 
-## 首次配置：安装后还需要完成这一步
+## 第一次使用：告诉 Codex 论文在哪、笔记存哪
 
-将 [个人配置模板](skills/paper-deep-reading/references/profile.example.md) 复制到当前操作系统用户主目录下的：
+安装完成后，可以直接这样说。下面的路径仅为示例，请替换成自己的路径：
 
 ```text
-~/.codex/paper-deep-reading.local.md
+用 $paper-deep-reading 精读 E:\Papers\paper.pdf。
+以后把我的精读笔记保存到 E:\ReadingNotes。
 ```
 
-这里的 `~` 表示当前用户主目录；在 Windows 中，可以通过 PowerShell 的 `$env:USERPROFILE` 查看。技能安装目录和个人配置目录是两个不同位置。
+如果只提供了 PDF，Codex 会在首次使用时询问：“你希望把精读笔记保存在哪个文件夹？请提供完整路径。”回答保存位置后，Codex 按模板建立本机的个人配置，记住这个位置；你无需手动复制或编辑配置文件。已经提供了笔记保存位置时，不重复询问。
 
-编辑复制后的文件，将 `<ABSOLUTE_OUTPUT_ROOT>` 替换成自己的研究笔记库绝对路径，并确认期刊分流、文件名和同名追加规则。研究背景来源可以保持为空，空值只会限制“与本人研究的关系”这一节。
+论文位置与笔记位置分别指定。上述示例读取 `E:\Papers\paper.pdf`，笔记保存在 `E:\ReadingNotes` 内；默认分类子文件夹为 `General`，文件名采用“年份 - 论文正式题目.md”。默认使用简体中文，研究背景来源和期刊分类映射均可暂时留空。
 
-匿名模板默认将未匹配或无法识别期刊的笔记保存到输出根目录下的 `Others` 子文件夹。论文所在位置是输入路径，笔记输出根目录需由使用者另外指定。
+下次直接提供另一份 PDF 即可沿用设置。需要更换保存位置时，可以说“以后把精读笔记保存到另一个完整路径”；Codex 应只更新对应设置，并保留其他个人偏好和既有笔记。
 
-该配置是由模型阅读的 Markdown，不需要安装配置解析器。模板中的输出路径占位符必须替换。配置缺失或必要值未填写时，技能会要求补充配置，不会自行猜测输出位置。详细字段见 [配置说明](skills/paper-deep-reading/references/configuration.md)。
-
-个人配置保存在本仓库之外。分享本项目时，请仅分享匿名模板和通用指令，不要一并提交个人配置、研究库、论文 PDF 或笔记。
+个人配置是一份记住保存位置和格式偏好的本地文本文件，保存在使用者的用户目录中，不会放进公开仓库。配置文件位置、字段说明和可选的手动配置方法见 [配置说明](skills/paper-deep-reading/references/configuration.md)。如果运行环境无法建立或读取配置，Codex 应说明原因，不得声称已经保存设置。
 
 ## 使用示例
 

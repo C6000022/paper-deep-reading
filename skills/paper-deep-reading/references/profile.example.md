@@ -1,15 +1,17 @@
 # Private local profile for Paper Deep Reading
 
-Copy this file to `<USER_HOME>/.codex/paper-deep-reading.local.md` and edit the
-copy. This is a model-readable Markdown profile, not executable configuration.
-Do not commit the completed copy to the public repository.
+For first-use setup, Codex creates a private copy at
+`<USER_HOME>/.codex/paper-deep-reading.local.md` after the user specifies the
+absolute note output root. Advanced users can also copy and edit this template
+manually. This is a model-readable Markdown profile, not executable
+configuration. Do not commit the completed copy to the public repository.
 
 ## Output location and routing
 
 - Absolute output root: `<ABSOLUTE_OUTPUT_ROOT>`
 - Journal-to-directory mappings: none initially. Add exact journal names and
   their destination subdirectory names here if needed.
-- Fallback directory: `Others`, relative to the output root. Use it when the
+- Fallback directory: `General`, relative to the output root. Use it when the
   journal is unspecified or has no configured mapping.
 - Keep all destination directories inside the configured output root. Use
   journal subdirectories only after resolving the selected destination.
