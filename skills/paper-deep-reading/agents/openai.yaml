@@ -1,0 +1,8 @@
+interface:
+  display_name: "精读"
+  short_description: "精读上传的论文PDF并将结构化笔记写入已配置的研究库"
+  default_prompt: "Use $paper-deep-reading to critically read my uploaded paper PDF and write the result to my configured research vault."
+
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "paper-deep-reading",
+  "version": "0.1.0",
+  "description": "Critically read scholarly PDFs and write evidence-traceable Markdown notes to a privately configured local research vault.",
+  "author": {
+    "name": "C6000022",
+    "url": "https://github.com/C6000022"
+  },
+  "repository": "https://github.com/C6000022/paper-deep-reading",
+  "license": "MIT",
+  "keywords": ["research", "pdf", "critical-reading", "agent-skills"]
+}

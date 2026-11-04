@@ -1,0 +1,14 @@
+*.local.md
+*.local.yaml
+*.local.yml
+.env
+.env.*
+*.pdf
+tmp/
+output/
+__pycache__/
+.DS_Store
+Thumbs.db
+*.local.json
+*.local.toml
+*.zip
