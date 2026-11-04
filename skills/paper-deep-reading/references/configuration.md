@@ -8,7 +8,9 @@ The Skill reads the following local file after resolving the current user's home
 
 ## First use through conversation
 
-If the profile is missing, ask for the absolute note output root only when the user has not already specified it. Then create the profile from [profile.example.md](profile.example.md), replacing `<ABSOLUTE_OUTPUT_ROOT>` and using the template defaults for unspecified optional preferences. In particular, use `General` as the fallback subdirectory, leave journal mappings and research-context sources empty, and keep the template's note language, filename pattern, and supplement rules.
+If the profile is missing, use an absolute note output root already specified by the user. Otherwise resolve the current user's Documents directory through the operating system, propose its `PaperNotes` child as the root, and state the exact final default note directory ending in `PaperNotes/General`. Ask once for an optional alternative, preferably without blocking read-only paper analysis. After giving the user a reasonable opportunity to reply, use the announced default if no alternative is supplied before saving. If the question tool returns no answer, use that same default. Do not infer the root from the paper location or a fixed example drive. If Documents cannot be resolved reliably, ask for a usable root rather than guessing.
+
+Create the profile from [profile.example.md](profile.example.md), replacing `<ABSOLUTE_OUTPUT_ROOT>` and recording whether the selected root was supplied by the user or came from the announced default. Use `General` as the fallback subdirectory, leave journal mappings and research-context sources empty, and keep the template's note language, filename pattern, and supplement rules unless the user requests changes.
 
 Resolve the current user's home directory through the operating system, create the profile's parent directory when needed, and write the profile as UTF-8. Verify the saved values before continuing. Do not overwrite a profile created in the meantime. If the profile cannot be saved, explain the actual error rather than reporting successful setup.
 

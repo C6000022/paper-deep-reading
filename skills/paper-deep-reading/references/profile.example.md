@@ -1,14 +1,16 @@
 # Private local profile for Paper Deep Reading
 
 For first-use setup, Codex creates a private copy at
-`<USER_HOME>/.codex/paper-deep-reading.local.md` after the user specifies the
-absolute note output root. Advanced users can also copy and edit this template
+`<USER_HOME>/.codex/paper-deep-reading.local.md` after the output root is supplied
+by the user or selected under the announced built-in default. Advanced users can also copy and edit this template
 manually. This is a model-readable Markdown profile, not executable
 configuration. Do not commit the completed copy to the public repository.
 
 ## Output location and routing
 
 - Absolute output root: `<ABSOLUTE_OUTPUT_ROOT>`
+- Output-root selection: record either the user's explicit choice or the
+  announced Documents/PaperNotes default used after the optional question.
 - Journal-to-directory mappings: none initially. Add exact journal names and
   their destination subdirectory names here if needed.
 - Fallback directory: `General`, relative to the output root. Use it when the
@@ -21,6 +23,8 @@ configuration. Do not commit the completed copy to the public repository.
   there as needed. A file occupying a required directory path is an error.
 
 Replace the output-root placeholder with a real absolute path before use.
+The built-in root is `PaperNotes` under the operating system's resolved user
+Documents directory; `General` is a child of that root, not part of the root.
 Treat placeholders or ambiguous routing rules as incomplete configuration.
 
 ## Filename and language
